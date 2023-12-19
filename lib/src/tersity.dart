@@ -11,11 +11,11 @@ class DurationTersity {
   @override
   String toString() => name;
 
-  /// Skip all time units below week
-  static const week = DurationTersity._(7, 1, 'week');
+  /// Skip all time units below year
+  static const year = DurationTersity._(7, 1, 'year');
 
   /// Skip all time units below day
-  static const day = DurationTersity._(6, 7, 'day');
+  static const day = DurationTersity._(6, 365, 'day');
 
   /// Skip all time units below hour
   static const hour = DurationTersity._(5, 24, 'hour');
@@ -33,7 +33,7 @@ class DurationTersity {
   static const microsecond = DurationTersity._(1, 1000, 'microsecond');
 
   static const list = [
-    week,
+    year,
     day,
     hour,
     minute,
@@ -52,12 +52,12 @@ class DurationTersity {
 }
 
 extension DurExt on Duration {
-  int get inWeeks => inDays ~/ 7;
+  int get inYears => inDays ~/ 365;
 
   int inUnit(DurationTersity unit) {
     switch (unit) {
-      case DurationTersity.week:
-        return inWeeks;
+      case DurationTersity.year:
+        return inYears;
       case DurationTersity.day:
         return inDays;
       case DurationTersity.hour:

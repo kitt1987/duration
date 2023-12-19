@@ -71,8 +71,8 @@ abstract class DurationLocale {
 
   String inUnit(DurationTersity unit, int amount, [bool abbreviated = true]) {
     switch (unit) {
-      case DurationTersity.week:
-        return week(amount, abbreviated);
+      case DurationTersity.year:
+        return year(amount, abbreviated);
       case DurationTersity.day:
         return day(amount, abbreviated);
       case DurationTersity.hour:

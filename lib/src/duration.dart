@@ -30,7 +30,7 @@ import 'tersity.dart';
 ///         abbreviated: false, locale: spanishLocale);
 String prettyDuration(Duration duration,
     {DurationTersity tersity = DurationTersity.second,
-    DurationTersity upperTersity = DurationTersity.week,
+    DurationTersity upperTersity = DurationTersity.year,
     DurationLocale locale = const EnglishDurationLocale(),
     String? spacer,
     String? delimiter,
@@ -80,7 +80,7 @@ String prettyDuration(Duration duration,
 
 String printDuration(Duration duration,
     {DurationTersity tersity = DurationTersity.second,
-    DurationTersity upperTersity = DurationTersity.week,
+    DurationTersity upperTersity = DurationTersity.year,
     DurationLocale locale = const EnglishDurationLocale(),
     String? spacer,
     String? delimiter,
